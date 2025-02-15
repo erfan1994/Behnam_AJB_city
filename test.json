@@ -1,0 +1,35 @@
+{
+  "profile_name": "test",
+  "max_connections": 2,
+  "active_connections": []
+}
+
+import json
+
+# خواندن فایل پروفایل
+with open('profile.json', 'r') as file:
+    profile = json.load(file)
+
+MAX_CONNECTIONS = profile['max_connections']
+active_connections = profile['active_connections']
+
+def check_connections(active_connections, max_connections):
+    if len(active_connections) >= max_connections:
+        return False
+    return True
+
+# مثال: اضافه کردن یک اتصال جدید
+new_connection = "device3"
+
+if check_connections(active_connections, MAX_CONNECTIONS):
+    active_connections.append(new_connection)
+    print("اتصال جدید اضافه شد.")
+    # به‌روزرسانی فایل پروفایل
+    profile['active_connections'] = active_connections
+    with open('profile.json', 'w') as file:
+        json.dump(profile, file, indent=4)
+else:
+    print("حداکثر تعداد اتصال‌ها رسیده است. امکان اتصال بیشتر وجود ندارد.")
+
+
+vmess://eyJhZGQiOiIxMDQuMTYuNjcuMzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6ImFxLmRhb3poYW5nLmxpbmsiLCJpZCI6ImY4YzkyYjNiLTU0NDctNDRhNS05ZTU0LTIzY2RjMjY5Y2I5MyIsIm5ldCI6IndzIiwicGF0aCI6ImY4YzkyYjNiIiwicG9ydCI6IjgwIiwicHMiOiLinYxb2b7Yp9uM2KfZhl/Yr9mI2LHZh1/Zhdi12LHZgV3inYwiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0=
