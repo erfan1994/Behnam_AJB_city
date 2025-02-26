@@ -14,7 +14,7 @@ jobs:
 
       - name: Update traffic values
         run: |
-          FILE="Behnam_AJB_city.txt"
+          FILE="Behnam_AJB_city"
           UPLOAD=$((RANDOM % 500000 + 100000))  # Random upload value between 100KB and 500KB
           DOWNLOAD=$((RANDOM % 500000 + 100000)) # Random download value between 100KB and 500KB
           TOTAL=104857600  # 100MB fixed
