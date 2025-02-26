@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update traffic values
         run: |
@@ -28,5 +30,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add Behnam_AJB_city.txt
-          git commit -m "Update traffic values"
-          git push
+          git commit -m "Update traffic values" || echo "No changes to commit"
+          git push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
