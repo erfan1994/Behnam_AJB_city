@@ -1,1 +1,32 @@
+name: Update Traffic Info
 
+on:
+  schedule:
+    - cron: "*/1 * * * *" # Runs every 1 minutes
+  workflow_dispatch: # Allows manual execution
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update traffic values
+        run: |
+          FILE="Behnam_AJB_city.txt"
+          UPLOAD=$((RANDOM % 500000 + 100000))  # Random upload value between 100KB and 500KB
+          DOWNLOAD=$((RANDOM % 500000 + 100000)) # Random download value between 100KB and 500KB
+          TOTAL=104857600  # 100MB fixed
+          EXPIRE=1741379461 # Expiration timestamp
+
+          # Replace the old subscription-userinfo line with the new values
+          sed -i "s|#subscription-userinfo:.*|#subscription-userinfo: upload=$UPLOAD; download=$DOWNLOAD; total=$TOTAL; expire=$EXPIRE|" "$FILE"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add Behnam_AJB_city.txt
+          git commit -m "Update traffic values"
+          git push
