@@ -1,6 +1,8 @@
-#profile-title: Behnam_AJB_city
+#profile-title: reza-ghaderi-danalo2
 #profile-update-interval: 1
-#subscription-userinfo: upload=1000000; download=1000000; total=9223372036854775807; expire=1745928171
+#subscription-userinfo: upload=60; download=60000; total=9223372036854775807; expire=1745928171
+#support-url: https://raw.githubusercontent.com/erfan1994/Behnam_AJB_city/refs/heads/main/Behnam_AJB_city
+#url-web-page-profile: https://raw.githubusercontent.com/erfan1994/Behnam_AJB_city/refs/heads/main/Behnam_AJB_city
 
 vless://5528489a-c548-481f-b558-8c7a8a0b6448@116.203.136.232:2078?security=none&type=tcp#[+]B-VPN[+]
 vless://c91ca460-51e6-470f-99ab-2b1d3439f194@190.93.247.169:443?security=tls&sni=byvless.xiaoqi666.xyz&type=ws&host=byvless.xiaoqi666.xyz&path=%2F#[+]B-VPN[+]
