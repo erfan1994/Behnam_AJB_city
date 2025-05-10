@@ -1,10 +1,6 @@
 #profile-title: morteza-ghaderi
 #profile-update-interval: 1
 #subscription-userinfo: upload=60; download=60000; total=9223372036854775807; expire=1747594034
-#support-url: https://raw.githubusercontent.com/erfan1994/Behnam_AJB_city/refs/heads/main/Behnam_AJB_city
-#url-web-page-profile: https://raw.githubusercontent.com/erfan1994/Behnam_AJB_city/refs/heads/main/Behnam_AJB_city
-
-
 
 vless://075a365b-b0c7-4ba3-b5a6-597850c223f9@185.135.9.80:8880?path=%2FTABRIZ.NET%2C%20TABRIZ.NET%2C%20TABRIZ.NET%2C%20TABRIZ.NET%2C%20TABRIZ.NET%2C%20TABRIZ.NET%3Fed%3D2560&security=&encryption=none&host=sinaazizpor.wapgiz.workers.dev&type=ws#{BEHNAM-VIP-VPN}
 vless://a3f9d9b6-3ae4-4c47-9dbf-33b0a5c7f1a5@195.85.59.95:2086?path=%2F%3Fed%3D2560&security=&encryption=none&host=0210.uous1wog.workers.dev&type=ws#{BEHNAM-VIP-VPN}
