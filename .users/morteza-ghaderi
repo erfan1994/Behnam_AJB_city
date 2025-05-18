@@ -1,5 +1,5 @@
 #profile-title: morteza-ghaderi
 #profile-update-interval: 1
-#subscription-userinfo: upload=8; download=8; total=8; expire=1747289001
+#subscription-userinfo: upload=8; download=8; total=8 ; expire=1745829877
 
 vless://1@127.0.0.1:80?security=none&encryption=none&host=api.acveo.ir&type=httpupgrade#Expired
